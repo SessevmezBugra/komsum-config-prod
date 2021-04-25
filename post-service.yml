@@ -3,7 +3,8 @@ spring:
     name: post-service
   data:
     mongodb:
-      database: post
+      database: ${RDS_DB_NAME:post}
+      host: ${RDS_HOSTNAME:post-database}
 
 server:
   port: 8091
